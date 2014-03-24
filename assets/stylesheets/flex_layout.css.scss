@@ -147,6 +147,7 @@
 }
 .column {
   float:none;
+  min-width: 250px;
   @include flex(1);
   @include display(flex);
   @include flex-direction(column);
@@ -180,6 +181,7 @@
   &.hb-state-collapsed {
     @include flex(0 1 auto);
     width: 80px;
+    min-width: 63px; /* still looks nice when its just a + sign */
     > h3 .ui-icon-plus { display:inline; }
     .collapsed {
       display: block;
@@ -232,6 +234,7 @@
    }
 }
 .board {
+  overflow-y: auto;
   @include display(flex);
   @include flex(1);
   @include align-content(stretch);
